@@ -30,4 +30,8 @@ export default observer(function ActivityListItemAttendee({ attendees }: Props) 
             ))}
         </List>
     )
+<<<<<<< HEAD
 })
+=======
+}) 
+>>>>>>> 22f8e3955b6153c975225bd3a32afe3b46c1eb5a
