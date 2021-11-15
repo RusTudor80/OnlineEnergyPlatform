@@ -30,4 +30,4 @@ export default observer(function ActivityListItemAttendee({ attendees }: Props) 
             ))}
         </List>
     )
-}) 
+})

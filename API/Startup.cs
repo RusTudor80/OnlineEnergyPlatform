@@ -36,11 +36,12 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers(opt =>{
+            services.AddControllers(opt => 
+            {
                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
                 opt.Filters.Add(new AuthorizeFilter(policy));
             })
-            .AddFluentValidation(config => 
+                .AddFluentValidation(config => 
             {
                 config.RegisterValidatorsFromAssemblyContaining<Create>();
             });
@@ -61,23 +62,16 @@ namespace API
 
             // app.UseHttpsRedirection();
 
-            app.UseRouting(); 
-
-            app.UseDefaultFiles(); 
-
-            app.UseStaticFiles();
+            app.UseRouting();
 
             app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapFallbackToController("Index","Fallback");
-                
             });
         }
     }

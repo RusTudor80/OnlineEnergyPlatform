@@ -13,4 +13,4 @@ export class Profile implements Profile {
         this.displayName = user.displayName;
         this.image = user.image;
     }
-} 
+}
