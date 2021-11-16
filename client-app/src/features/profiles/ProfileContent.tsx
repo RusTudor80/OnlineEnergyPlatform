@@ -6,6 +6,7 @@ import { useStore } from '../../app/stores/store';
 import ProfileAbout from './ProfileAbout';
 import ProfileActivities from './ProfileActivity';
 import ProfileFollowings from './ProfileFollowings';
+
 import ProfilePhotos from './ProfilePhotos';
 
 interface Props {
